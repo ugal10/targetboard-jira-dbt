@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ ref('stg_jira__issues') }}
+    select * from {{ ref('stg_jira_issues') }}
 ),
 
 filtered as (

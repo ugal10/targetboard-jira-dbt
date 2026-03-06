@@ -1,9 +1,9 @@
 with changelogs as (
-    select * from {{ ref('stg_jira__changelogs') }}
+    select * from {{ ref('stg_jira_changelogs') }}
 ),
 
 items as (
-    select * from {{ ref('stg_jira__changelogs_items') }}
+    select * from {{ ref('stg_jira_changelogs_items') }}
 ),
 
 issues as (
