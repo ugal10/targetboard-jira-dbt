@@ -40,7 +40,7 @@ targetboard_jira/
 │       ├── fct_issue_status_history.sql
 │       └── schema.yml
 ├── analyses/
-│   └── issue_status_as_of_example.sql   # Example queries
+│   └── issue_status_as_of.sql   # Example queries
 ├── tests/
 │   └── test_issue_status_as_of.sql      # Function logic test
 ├── sql/
@@ -161,9 +161,9 @@ targetboard_jira:
     dev:
       type: postgres
       host: <host>
-      port: 25060
-      dbname: targetboard_production_data_0001
-      user: doadmin
+      port: <port>
+      dbname: <dbname>
+      user: <user>
       password: <password>
       schema: dbt_dev_gal
       threads: 1
