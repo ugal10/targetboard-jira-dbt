@@ -1,0 +1,23 @@
+name: 'targetboard_jira'
+version: '1.0.0'
+profile: 'targetboard_jira'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+snapshot-paths: ["snapshots"]
+test-paths: ["tests"]
+analysis-paths: ["analyses"]
+
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  targetboard_jira:
+    staging:
+      +schema: dbt_dev_gal
+      +materialized: view
+    dwh:
+      +schema: dbt_dev_gal
+      +materialized: table
+    marts:
+      +schema: dbt_dev_gal
+      +materialized: table
