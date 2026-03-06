@@ -13,11 +13,8 @@ clean-targets: ["target", "dbt_packages"]
 models:
   targetboard_jira:
     staging:
-      +schema: dbt_dev_gal
       +materialized: view
     dwh:
-      +schema: dbt_dev_gal
       +materialized: table
     marts:
-      +schema: dbt_dev_gal
       +materialized: table
